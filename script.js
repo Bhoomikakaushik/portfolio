@@ -46,9 +46,13 @@ document.addEventListener('DOMContentLoaded',function(){
     direction: 'horizontal',
     loop: true,
     spaceBetween: 30,
-    centeredSlides: true,
-
-    // If we need pagination
+    centeredSlides: false,
+    touchRatio: 0.7, 
+    followFinger: true,
+    shortSwipes: true, 
+    longSwipesRatio: 0.3,
+    resistance: false, 
+    
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -61,22 +65,14 @@ document.addEventListener('DOMContentLoaded',function(){
       prevEl: '.swiper-button-prev',
     },
 
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-
-    // breakpoints: {
-    //   0: {
-    //     slidesPerView: 1
-    //   },
-    //   768: {
-    //     slidesPerView: 2
-    //   },
-    //   1024: {
-    //     slidesPerView: 3
-    //   }
-    // }
+    breakpoints: {
+      990: {
+        centeredSlides: true,
+        touchRatio: 1, 
+        followFinger: true,
+        shortSwipes: false
+      }
+    }
   });
 });
 
